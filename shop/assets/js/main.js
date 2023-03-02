@@ -1,83 +1,3 @@
-//var vs let
-//1.
-
-var primaVariabila = 20;
-var primaVariabila = 40; //redeclareare este permisa dar nu este recomandata
-//primaVariabila = 60; // reasignarea erte ok , schimba valoarea variabilei
-console.log(primaVariabila);
-let primulNumar = 10;
-//let primulNumar = 17;// redeclararea cu let genereaza eroare: SyntaxError
-primulNumar = 27;// reasignarea erte ok , schimba valoarea variabilei
-console.log(primulNumar);
-
-//2.
-function myTest() {
-    //declar local o variabila
-    var masina1;
-    masina1 = 'Ferrari';
-    console.log('Masina mea noua este: ' + masina1);
-}
-//console.log('Masina ta este: ' + masina1);//ReferenceError
-function myTest() {
-    //declar local o variabila
-    let masina1;
-    masina1 = 'Ferrari';
-    console.log('Masina mea noua este: ' + masina1);
-}
-//console.log('Masina ta este: ' + masina1);// ReferenceError
-//2.1
-{
-    //declar global o variabila chiar daca se afla intre { }
-    var culoare = 'rosie';
-    console.log('Masina mea noua este: ' + culoare);
-
-}
-console.log('Masina ta este: ' + culoare);
-{
-    //declar local o variabila  intre { }
-    let model = '125 s';
-    console.log('Modelul masinei mele este: ' + model);
-
-}
-//console.log('Modelul masinei tale este: ' + model);
-
-//2.2 declarata global
-var masina = 'Dacia';
-
-function myCar(){
-    console.log('Masina mea din garaj este: '+ masina);
-}
-
-console.log('Masina mea este: '+ masina);
-
-let masina2 = 'Opel';
-
-function myCar(){
-    console.log('Masina mea din garaj este: '+ masina2);
-}
-
-console.log('Masina mea este: '+ masina2);
-//3.
-function salutvar() {
-    console.log(foo); // undefined
-    var foo = "Salut Var";
-    console.log(foo); 
-  }
-  
-  salutvar();
-  function salutlet() {
-    console.log(foo); // ReferenceError
-    let foo = "Salut let";
-    console.log(foo); 
-  }
-  
-  salutlet();
-
-  //4
-  let nume = 'Popescu';
-  const prenume='Dan';
-  nume ='Ionescu';
-  prenume = 'Ion';
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 2000,
@@ -86,6 +6,44 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   keyboard:true,
   touch: true
 })
+const scrollBtn = document.querySelector(".gototop");
+        const btnVisibility = () => {
+    if (window.scrollY > 400) {
+        scrollBtn.style.visibility = "visible";
+    } else {
+        scrollBtn.style.visibility = "hidden";
+    }
+};
+document.addEventListener("scroll", () => {
+    btnVisibility();
+});
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+// Get the button:
+// let mybutton = document.getElementById("myBtn");
+
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
+
+// // When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//   document.body.scrollTop = 0; // For Safari
+//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// }
 
 
 var id;
@@ -123,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function(){
         } 
     });
   }); 
+  
 
 // document.addEventListener("DOMContentLoaded", function(){
 //     var myScrollSpy = new bootstrap.ScrollSpy(document.body, {
