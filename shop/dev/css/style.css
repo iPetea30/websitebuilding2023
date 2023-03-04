@@ -167,3 +167,26 @@
     transform: translateY(-20px); }
   100% {
     transform: translateY(0px); } }
+
+#gradient1 {
+  background-image: linear-gradient(to bottom right, blue, cyan, grey, white); }
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 25px; }
+
+.dark-mode {
+  background-color: white;
+  color: black; }
+
+.show-cart li {
+  display: flex; }
+
+.card {
+  margin-bottom: 20px; }
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center; }
