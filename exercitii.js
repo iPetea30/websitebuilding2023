@@ -167,16 +167,16 @@ console.log(ageJonas, ageSarah, averageAge);
 
 // Data 2
 
-// let masaMark = 95;
-// let masaJohn = 85;
+// let massMark = 95;
+// let massJohn = 85;
 
-// let inaltimeMark = 1.88;
-// let inaltimeJohn = 1.76;
+// let heightMark = 1.88;
+// let heightJohn = 1.76;
 
-// // let BMIMark = masaMark / inaltimeMark ** 2;
-// // let BMIJohn = masaJohn / inaltimeJohn ** 2;
-// const BMIMark = masaMark / (inaltimeMark ** 2);
-// const BMIJohn = masaJohn / (inaltimeJohn ** 2);
+// // let BMIMark = massMark / heightMark ** 2;
+// // let BMIJohn = massJohn / heightJohn ** 2;
+// const BMIMark = massMark / (heightMark ** 2);
+// const BMIJohn = massJohn / (heightJohn ** 2);
 
 // console.log(BMIMark, BMIJohn);
 
@@ -241,3 +241,159 @@ console.log(ageJonas, ageSarah, averageAge);
 // } else {
 //     console.log(`Populatia din ${country} este cu ${33 - population} milioane sub medie.`);
 // }
+
+
+///// CHALLENGE #2
+
+// Folosiți exemplul IMC / BMI din Provocarea #1 și codul pe care l-ați scris deja și imbunatiti-l.
+// Sarcinile tale:
+// 1. Imprimați o ieșire pe consolă, spunând cine are IMC / BMI mai mare. Mesajul este fie „IMC-ul lui Mark este mai mare decât al lui John!” sau „IMC-ul lui John este mai mare decât al lui Mark!”
+// 2. Utilizați un literal șablon pentru a include valorile IMC în rezultate. Exemplu: „Al lui Mark
+// IMC (28,3) este mai mare decât cel al lui John (23,9)!"
+// Sugestie: Folosiți o declarație if/else
+
+// SUCCES
+
+// const BMIMark = 28.3;
+// const BMIJohn = 23.9;
+
+// if(BMIMark > BMIJohn){
+//     console.log("IMC-ul lui Mark este mai mare decat al lui John !");
+// } else {
+//     conesole.log("IMC-ul lui John este mai mare decat al lui Mark !");
+// }
+
+
+// § Data 2: Mark cântărește 95 kg și are 1,88 m înălțime. John cântărește 85 kg și are 1,76
+// m înaltime.
+
+// const masaMark = 95;
+// const masaJohn = 85;
+
+// const inaltimeMark = 1.88;
+// const inaltimeJohn = 1.76;
+
+// // const BMIMark = masaMark / inaltimeMark ** 2;
+// // const BMIJohn = masaJohn / inaltimeJohn ** 2;
+// const BMIMark = masaMark / (inaltimeMark ** 2);
+// const BMIJohn = masaJohn / (inaltimeJohn ** 2);
+
+// console.log(BMIMark, BMIJohn);
+
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log(markHigherBMI); // false
+
+
+// if (markHigherBMI) {
+//     console.log(`BMI-ul lui Mark, (${BMIMark}) este mai mare decat al lui John (${BMIJohn})!`);
+// } else {
+//     console.log(`BMI-ul lui John, (${BMIJohn}) este mai mare decat al lui Mark (${BMIMark})!`);
+// }
+
+
+//// Type Conversion and Coercion //Conversiunea si Coersiunea tipurilor de date
+
+// Type conversion
+// const inputYear = "1991";
+// console.log(Number(inputYear) + 18, inputYear); // 2009
+
+// const namePersoana = "Ion";
+// console.log(Number(namePersoana)); // NaN
+// console.log(typeof NaN); // number
+
+// console.log(String(23), 23);// string 23, number 23
+
+// // Type coersion
+// console.log("Eu am " + 23 + " ani."); // string Eu am 23 ani
+// console.log("23" - "10" - 3); // number 10
+// console.log("23" / "2"); // number 11.5
+
+// let n = "1" + 1; // string 11
+// n -= 1; // string 11 - 1 = number 10
+// console.log(n); // number 10
+
+// let m = 2 + 3 + 4 + '5'; // string '95'
+// console.log(m); // string '95'
+
+// let k = '10' - '4' - '3' - 2 + "5"; // string '15'
+// console.log(k); // string '15'
+
+// EXERCITIU
+// console.log("9" - "5"); // number 4
+// console.log('19' - '13' + '17'); // string '617'
+// console.log('19' - '13' + 17); // number 23
+// console.log('123' < 57); // false
+// console.log(5 + 6 + '4' + 9 - 4 -2); // number 1143
+
+
+
+//// Truthy or Falsy Values //Valori Truthy sau Falsy
+
+// Falsy
+// 5 valori falsy : 0, " ", undefined, null, NaN
+
+// console.log(Boolean(0)); // false
+// console.log(Boolean(undefined)); // false
+// console.log(Boolean("2341")); // true
+// console.log(Boolean({})); // true
+
+// const bani = 120;
+// if (bani){ // bani = 0 => false
+//     console.log("Ai ceva bani. Nu-i cheltui pe toti !");
+// } else {
+//     console.log("Du-te si gaseste-ti un job !");
+// }
+
+// let inaltime = 1.82;
+
+// if(inaltime){
+//     console.log("YAY! Variabila noastra este definita !");
+// } else {
+//     console.log("Variabila noastra nu este definita !");
+// }
+
+
+
+//// Equality operators == vs === //Operatori de egalitate == vs ====
+
+// const age = "18";
+
+// if (age === 18) console.log("Ai devenit un adult. (operator strict");
+// if (age == 18) console.log("Ai devenit un adult. (operator liber)");
+
+// const favourite = Number(prompt("Care este numarul tau favorit ?"));
+// console.log(favourite); // 23 => string
+// console.log(typeof favourite); // string '23'
+
+// if (favourite == 23) { // true => string '23'
+//     console.log("23 este un numar cool.");
+// } else if (favourite == 7) {
+//     console.log("7 este de asemenea un numar cool.");
+// }
+
+// if (favourite === 23) { // === => false => string'23' nu este egal cu number 23
+//     console.log("23 este un numar cool.");
+// } else if (favourite === 7) {
+//     console.log("7 este de asemenea un numar cool.");
+// } else if (favourite === 9) {
+//     console.log("9 este de asemenea un numar bun.");
+// } else {
+//     console.log("Numarul pe care l-ai introdus nu este nici 9 nici 7 !");
+// }
+
+// if(favourite != 23) console.log("De ce nu ai ales numarul 23 ?"); // 9 != => se executa linia de cod
+
+// EXERCITIU
+
+// const numNeighbours = Number(prompt("How many neighbours does your country have?"));
+// const numNeighbours = 10;
+
+// if (numNeighbours === 1) {
+//     console.log("Only 1 border neighbour.");
+// } else if (numNeighbours > 1) {
+//     console.log("More than 1 border neighbours.");
+// } else {
+//     console.log("No border neighbours");
+// }
+
+
