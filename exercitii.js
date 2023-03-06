@@ -1,6 +1,6 @@
 const country = 'Romania';
 const continent = 'Europa';
-let population = 18;
+let population = 49;
 // console.log(country);
 // console.log(continent);
 // console.log(population);
@@ -38,8 +38,8 @@ let javaScriptIsFun = true;
 
 // console.log(typeof null);
 
-// let island = false;
-const language = 'romana';
+let isIsland = false;
+const language = 'english';
 // console.log(typeof country);
 // console.log(typeof population);
 // console.log(typeof country);
@@ -397,3 +397,139 @@ console.log(ageJonas, ageSarah, averageAge);
 // }
 
 
+
+//// Basic Boolean Logic // logica Boolean
+
+// Boolean operators : AND, OR, NOT
+// A AND B => true only if both or all variables are true. False if one variable is false.
+// A OR B => true if one or all variables are true. False only if all variables are false.
+// NOT A, NOT B => if one variable A / B is true, than NOT A / NOT B changes to false.
+
+
+
+//// Logical Operators // Operatori Logici
+
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision); // AND Logical Operator => false
+// console.log(hasDriversLicense || hasGoodVision); // OR Logical Operator => true
+// console.log(!hasDriversLicense); // NOT Logical Operator => false
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log("Sara ar trebui sa fie la volan.");
+// } else {
+//     console.log("Sara nu ar trebui sa conduca masina !");
+// } // False => true && (AND) false => FALSE
+
+// const isTired = true; // C
+// if (hasDriversLicense && hasGoodVision && !isTired) { // true AND true AND false => false
+//     console.log("Sara ar trebui sa fie la volan.");
+// } else {
+//     console.log("Sara nu ar trebui sa conduca masina !");
+// } 
+
+
+// EXERCITIU
+// 1. Comentați codul anterior, astfel încât promptul să nu ne stea în cale
+// 2. Să presupunem că Sarah caută o țară nouă în care să trăiască. Ea vrea să trăiască într-o
+// țară care vorbește engleza, are mai puțin de 50 de milioane de locuitori și nu este o
+// insulă.
+// 3. Scrieți o declarație if pentru a o ajuta pe Sarah să descopere dacă țara dvs. este potrivită pentru ea.
+// Va trebui să scrieți o condiție care să țină cont de toate criteriile lui Sarah. Luați
+// timpul necesar și verificați o parte a soluției dacă este necesar.
+// 4. Dacă țara ta este potrivită, înregistrează un șir ca acesta: „Ar trebui să locuiești în Portugalia :)”. Dacă
+// nu, înregistrați „Portugalia nu îndeplinește criteriile dvs. :('
+// 5. Probabil că țara ta nu îndeplinește toate criteriile. Deci, întoarce-te și temporar
+// modifică unele variabile pentru a face condiția adevărată (cu excepția cazului în care locuiți în
+// Canada :D)
+
+// if (language === "english" && population < 50 && !isIsland) {
+//     console.log(`You should live in ${country} :)`); // You should live in Romania :)
+// } else {
+//     console.log(`${country} does not fulfill your criteria.`);
+// }
+
+
+
+//// CHALLENGE #3
+// Există două echipe de gimnastică, Delfinii și Koalas. Ei concurează împotriva fiecăruia
+// de 3 ori. 
+// Câștigătorul cu cel mai mare scor mediu câștigă un trofeu!
+// Sarcinile tale:
+// 1. Calculați scorul mediu pentru fiecare echipă, folosind datele de testare de mai jos
+// 2. Comparați scorurile medii ale echipelor pentru a determina câștigătorul competiției, și imprimați-l pe consolă. Nu uitați că poate exista o remiză, așa că testați pentru asta
+// de asemenea (remiză înseamnă că au același punctaj mediu)
+
+// 3. Bonus 1: Includeți o cerință pentru un scor minim de 100. Cu această regulă, o echipa câștigă doar dacă are un scor mai mare decât cealaltă echipă și în același timp are un punctaj de cel puțin 100 de puncte. 
+// Sugestie: Utilizați un operator logic pentru a testa valoarea minimă scor, precum și mai multe blocuri else-if.   
+
+// 4. Bonus 2: Scorul minim se aplică și la o remiză! Deci o remiză are loc doar când
+// ambele echipe au același scor și ambele au un scor mai mare sau egal cu 100 puncte. În caz contrar, nicio echipă nu câștigă trofeul
+
+// Date de testare:
+// § Date 1: Delfinii scor 96, 108 și 89. Koalas scor 88, 91 și 110
+
+// § Bonus date 1: Delfinii scor 97, 112 și 101. Koala scor 109, 95 și 123
+
+// § Bonus date 2: Delfinii scor 97, 112 și 101. Koala scor 109, 95 și 106
+
+
+// SUCCES
+
+// const scoreDolphins = (96 + 109 + 89) / 3;
+// const scoreKoalas = (88 + 96 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas); // 97.666666, 96.3333333
+
+// if(scoreDolphins > scoreKoalas){
+//     console.log("Dolphins have won the the trophy ! 🏆");
+// } else if (scoreKoalas > scoreDolphins){
+//     console.log("Koalas have won the the trophy ! 🏆");
+// } else if (scoreDolphins === scoreKoalas){
+//     console.log("It was a tie ! 😆");
+// }
+
+// BONUS 1 + 2
+// Includeți o cerință pentru un scor minim de 100. Cu această regulă, o echipa câștigă doar dacă are un scor mai mare decât cealaltă echipă și în același timp are un punctaj de cel puțin 100 de puncte. 
+// Sugestie: Utilizați un operator logic pentru a testa valoarea minimă scor, precum și mai multe blocuri else-if.
+// 4. Bonus 2: Scorul minim se aplică și la o remiză! Deci o remiză are loc doar când
+// ambele echipe au același scor și ambele au un scor mai mare sau egal cu 100 puncte. În caz contrar, nicio echipă nu câștigă trofeul
+
+
+// § Bonus date 1: Delfinii scor 97, 112 și 101. Koala scor 109, 95 și 123
+
+// const scoreDolphins = (97 + 112 + 101) / 3;
+// const scoreKoalas = (109 + 95 + 123) / 3;
+// console.log(scoreDolphins, scoreKoalas); // 103.333333, 109
+
+// if(scoreDolphins > scoreKoalas && scoreDolphins >= 100){
+//     console.log("Dolphins have won the the trophy ! 🏆");
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100){
+//     console.log("Koalas have won the the trophy ! 🏆");
+// } else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100){
+//     console.log("It was a tie ! 😆");
+// } else {
+//     console.log("No one won the trophy !😭");
+// }
+
+//Koalas have won the the trophy ! 🏆
+
+// § Bonus date 2: Delfinii scor 97, 112 și 101. Koala scor 109, 95 și 106
+
+// const scoreDolphins = (97 + 112 + 101) / 3;
+// const scoreKoalas = (109 + 95 + 106) / 3;
+// console.log(scoreDolphins, scoreKoalas); // 103.333333, 103.333333
+
+// if(scoreDolphins > scoreKoalas && scoreDolphins >= 100){
+//     console.log("Dolphins have won the the trophy ! 🏆");
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100){
+//     console.log("Koalas have won the the trophy ! 🏆");
+// } else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100){
+//     console.log("It was a tie ! 😆");
+// } else {
+//     console.log("No one won the trophy !😭");
+// }
+
+//It was a tie ! 😆
