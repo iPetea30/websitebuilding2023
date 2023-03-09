@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }); 
   
 
+
 // document.addEventListener("DOMContentLoaded", function(){
 //     var myScrollSpy = new bootstrap.ScrollSpy(document.body, {
 //         target: "#navbar_top"
@@ -212,6 +213,7 @@ $(document).ready(function () {
         target: "#navbar_top"
     })
 });
+
 
 
 (function () {
