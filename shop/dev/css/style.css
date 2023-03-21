@@ -168,6 +168,9 @@
   100% {
     transform: translateY(0px); } }
 
+.delete-item {
+  background-color: red; }
+
 #gradient1 {
   background-image: linear-gradient(to bottom right, blue, cyan, grey, white); }
 

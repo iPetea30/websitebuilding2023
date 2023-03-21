@@ -54,7 +54,7 @@ function onLoad() {
 
     }).finally(() => {
         console.log("Cererea s-a incheiat: cu succes sau fara succes.");
-
+        $.getScript("./assets/js/cart.js");
     });
 }
 
