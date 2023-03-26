@@ -8,21 +8,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="#sec-home" class="nav-item nav-link">Acasa</a>
-                <a href="#sec-about" class="nav-item nav-link">Despre</a>
-                <a href="#sec-products" class="nav-item nav-link">Produse</a>
-                <a href="produse.html" class="nav-item nav-link" id="produse">Toate prod</a>
-                <a href="#sec-contact" class="nav-item nav-link">Contact</a>
+                <a href="index.html" class="nav-item nav-link">Acasa</a>
+                <a href="index.html#sec-about" class="nav-item nav-link">Despre</a>
+                <a href="index.html#sec-products" class="nav-item nav-link">Produse noi</a>
+                <a href="produse.html" class="nav-item nav-link" id="produse">Produse</a>
+                <a href="index.html#sec-contact" class="nav-item nav-link">Contact</a>
             </div>
             <button onclick="myFunction()">💡</button>
             <div class="navbar-nav ms-auto">
                 <button type="button" class="btn btn-primary" 
-                data-bs-toggle="modal" data-bs-target="#cart"
-                
-                >Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button>
-    
-                <a href="#" class="nav-item nav-link">Login</a>
+                        data-bs-toggle="modal" data-bs-target="#cart">Cart (<span
+                        class="total-count"></span>)
+                </button>
+                <button class="clear-cart btn btn-danger">Clear Cart</button>
+
+                <a data-bs-toggle="modal" data-bs-target="#modalForm" data-email="dumi.puia@gmail.com" data-nume="Petea" href="#" class="nav-item nav-link">Login</a>
             </div>
-        </div> 
+        </div>
     </div>
 </nav>

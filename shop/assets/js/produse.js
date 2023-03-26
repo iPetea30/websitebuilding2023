@@ -8,6 +8,7 @@ console.log('apelez api')
 // Pas 1
 async function getProducts() {
     let response = await fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline");
+    // let response = await fetch("http://127.0.0.1:5500/curs6/solutii/app1/makeup.json");
     let products = await response.json();
     return products;
 }
@@ -77,7 +78,8 @@ async function listProducts(products) {
                 <h4 class="card-title">${product.name} ${product.category}</h4>
                 <p class="text-muted">Starting from ${product.price}</p>
                 <a target='_blank' class="btn btn-outline-primary btn-sm" href="${product.product_link}" data-abc="true">View Products</a>
-                <button data-id="${product.id}"type="button" class="btn btn-success float-end">Add to cart</button>
+                <a href="#" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" class="add-to-cart btn btn-primary text-white">Add to
+                cart</a>
             </div>
         </div>
     </div>
